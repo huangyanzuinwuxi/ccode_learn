@@ -1,0 +1,20 @@
+1.  const 放在函数前面表示函数的返回值是一个常量，不能修改
+    const 放在函数后面表示函数引用的类的成员是常量，不能修改
+
+2. 类的构造函数不需要返回类型，切记不能加返回值修饰
+
+3. this指针其实就是指向当前对象的指针，是隐式的。是由编译器通过寄存器传递，不由user传递；
+    当对象已经初始化，则指向该对象的this指针是不能别修改，所以需要用const修饰。
+    eg:
+const Golf& Golf::setgolf(const Golf&g)
+{
+    strcpy(fullname, g.fullname);
+    handicap =  g.handicap;
+    
+    return *this;
+}
+其中
+
+4. 类的private成员在类的外部是无法访问，public成员可以访问
+
+5. 
