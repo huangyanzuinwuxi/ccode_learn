@@ -15,7 +15,7 @@ bool Stack::isfull()const
     return (top == MAX) ? 1 : 0;
 }
 
-bool Stack::push(const Item& item)
+bool Stack::push(const Item& item)  // 进栈
 {
     if (top < MAX) {
         items[top++] = item;
@@ -25,7 +25,12 @@ bool Stack::push(const Item& item)
     }
 }
 
-bool Stack::pop(Item& item)
+bool Stack::pop(Item& item)   //出栈
 {
-
+    if (top > 0) {
+        item = items[--top];
+        return true;
+    } else {
+        return false;
+    }
 }
