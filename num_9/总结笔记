@@ -15,6 +15,7 @@ const Golf& Golf::setgolf(const Golf&g)
 }
 其中
 
-4. 类的private成员在类的外部是无法访问，public成员可以访问
+4. 类的private成员在类的外部是无法访问，public成员可以访问，所以private 成员是不可以初始化的，只能在构造函数或者其他成员函数中进行定义和初始化
+；
 
 5. 
